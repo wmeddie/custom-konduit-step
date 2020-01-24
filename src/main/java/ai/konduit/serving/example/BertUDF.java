@@ -39,7 +39,7 @@ public class BertUDF implements CustomPipelineStepUDF, LabeledSentenceProvider{
                     .task(BertIterator.Task.SEQ_CLASSIFICATION)
                     .build();
         } catch (IOException e) {
-            throw new IllegalStateException("Vocabulary file missing.  Check that JVM property -Dbert.vocab is set porperly.", e);
+            throw new IllegalStateException("Vocabulary file missing.  Check that JVM property -Dbertudf.vocab is set porperly.", e);
         }
     }
 
