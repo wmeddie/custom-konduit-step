@@ -1,0 +1,18 @@
+---
+serving:
+  http_port: 1337
+  input_data_format: JSON
+  output_data_format: JSON
+  log_timings: True
+  extra_start_args:
+steps:
+  my_custom_step:
+    type: CUSTOM
+    custom_udf_clazz: ai.konduit.serving.example.BertUDF
+
+client:
+  input_data_format: NUMPY
+  output_data_format: NUMPY
+  return_output_data_format: NUMPY
+  host: http://localhost
+  port: 1337
