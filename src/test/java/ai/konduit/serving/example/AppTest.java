@@ -49,7 +49,7 @@ public class AppTest {
 
     @Test
     public void testUdfWithSentence() {
-        String input = "i have a pen i have a pineapple";
+        String input = "i have a pen i have pineapple";
         Text inputText = new Text(input);
         Record record = new Record(Collections.singletonList(inputText), null);
         org.datavec.api.records.Record[] outputs = new BertUDF().udf(new org.datavec.api.records.Record[]{record});
